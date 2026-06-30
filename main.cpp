@@ -1,29 +1,36 @@
-﻿#include <iostream>
-#include <iomanip> 
-using namespace std;
+#include <iostream>
+#include <string>
 
-int main() {
-    string studentsID;
-    float lab1, lab2, lab3, average;
+int main() 
+{
+    std::string ngalan, section;
 
-    cout << "Enter Students ID: ";
-    cin >> studentsID;
+    std::cout << "Enter Student Name: ";
+    std::getline(std::cin, ngalan);
 
-    cout << "Enter Lab 1 Score: ";
-    cin >> lab1;
+    std::cout << "Enter Section: ";
+    std::getline(std::cin, section);
 
-    cout << "Enter Lab 2 score: ";
-    cin >> lab2;
+    double b, h, s;
 
-    cout << "Enter Lab 3 score: ";
-    cin >> lab3;
+    std::cout << "\nEnter b: ";
+    std::cin >> b;
 
-    average = (lab1 + lab2 + lab3) / 3;
+    std::cout << "Enter h: ";
+    std::cin >> h;
 
-    cout << endl;
-    cout<< "StudentsID:   " << studentsID << endl;
-    cout << "Average Score: " << fixed <<
-    setprecision(4) << average << endl;
+    std::cout << "Enter s: ";
+    std::cin >> s;
+
+    double surfaceArea = (b * b) + (2 * b * s);
+    double volume = (1.0 / 3.0) * (b * b) * h;
+
+    std::cout << "\n----- PYRAMID CALCULATOR -----\n";
+    std::cout << "Student Name: " << ngalan << "\n";
+    std::cout << "Section: " << section << "\n";
+
+    std::cout << "\nSurface Area of Square Pyramid: " << surfaceArea << "\n";
+    std::cout << "Volume of Square Pyramid: " << volume << "\n";
 
     return 0;
 }
